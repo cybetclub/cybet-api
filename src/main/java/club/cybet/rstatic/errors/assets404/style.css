@@ -1,0 +1,266 @@
+/*
+Theme Name: HUGE
+Description: Creative Coming Soon Template
+Author: SquirrelLabs
+Author URI: https://themeforest.net/user/squirrellabs/portfolio?ref=SquirrelLab
+Version: 1.0
+License: https://themeforest.net/licenses/standard
+
+---
+
+/*******************************
+  Table of Contents
+
+  1.0 General Styles
+  2.0 Content Styles
+*******************************/
+
+/**********************************/
+/******* 1.0 General Styles *******/
+/**********************************/
+html {
+  font-size: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+body {
+  background: #222;
+  height: 100%;
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.5;
+  font-family: "Roboto Mono", Courier, "Courier New", monospace;
+  letter-spacing: 0.05em;
+  color: #666;
+}
+
+p {
+  margin: 1.5em 0 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/**********************************/
+/******* 2.0 Content Styles *******/
+/**********************************/
+.left-side {
+  padding: 170px 5% 70px;
+}
+
+.left-side .entry-title {
+  font-size: 72px;
+  margin-bottom: 100px;
+}
+
+.left-side .btn {
+  margin-top: 20px;
+}
+
+.right-side {
+  background: #222;
+  border-left: solid 1px #1d1e20;
+  text-align: center;
+  position: relative;
+  height: 100vh;
+}
+
+.sc {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+progress {
+  -webkit-appearance: none;
+  width: 100%;
+  height: .25em;
+  border: none;
+  color: #ff8b8b;
+}
+
+progress::-webkit-progress-bar {
+  background-color: rgba(255,255,255,.1);
+}
+
+progress::-webkit-progress-value {
+  background-color: #ff8b8b;
+  -webkit-transition: width .4s cubic-bezier(0, 0, 0.2, 1);
+}
+
+progress::-moz-progress-value {
+  background-color: #ff8b8b;
+  -moz-transition: width .4s cubic-bezier(0, 0, 0.2, 1);
+}
+
+#demo {
+  position: relative;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#progress {
+  position: absolute;
+  left: 0;
+  bottom: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#cface,
+#cbody {
+  cursor: pointer;
+}
+
+#faces,
+#copy,
+#record,
+#cspark,
+#paw_1_,
+#progress {
+  pointer-events: none;
+}
+
+/* hint */
+#paw_1_ {
+  opacity: 0;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+#demo:not(.petting):not(.petting-head):not(.happy) #paw_1_ {
+  opacity: 1;
+  -webkit-animation: paw 3.6s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  animation: paw 3.6s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@-webkit-keyframes paw {
+  from, to {
+    -webkit-transform: translate3d(1em,7em, 0) rotate(14deg);
+    transform: translate3d(1em,7em, 0) rotate(14deg);
+  }
+
+  50% {
+    -webkit-transform: translateY(1em) rotate(5deg);
+    transform: translateY(1em) rotate(5deg);
+  }
+}
+
+@keyframes paw {
+  from, to {
+    -webkit-transform: translate3d(1em,7em, 0) rotate(14deg);
+    transform: translate3d(1em,7em, 0) rotate(14deg);
+  }
+
+  50% {
+    -webkit-transform: translateY(1em) rotate(5deg);
+    transform: translateY(1em) rotate(5deg);
+  }
+}
+
+/* petting */
+#demo.petting #cface,
+#demo.petting #cbody,
+#demo.petting #faces {
+  animation: shake 1.8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#demo.petting #faces > * {
+  display: none;
+}
+
+/* petting on the belly */
+#demo.petting #faces #wonder {
+  display: block;
+}
+
+/* petting on the head */
+#demo.petting-head #cface,
+#demo.petting-head #faces {
+  animation: shake .5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#demo.petting-head #faces {
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#demo.petting-head #faces > * {
+  display: none;
+}
+
+#demo.petting-head #faces #scared {
+  display: block;
+}
+
+/* Happy */
+#demo.happy #faces > * {
+  display: none;
+}
+
+#demo.happy #faces #happy {
+  display: block;
+}
+
+@-webkit-keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(1px, 0, 0);
+    transform: translate3d(1px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(1px, 0, 0);
+    transform: translate3d(1px, 0, 0);
+  }
+}
+
+.st0{fill:#222222;}
+.st1{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+.st2{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
+.st3{fill:#FFFFFF;}
+.st4{display:none;}
+.st5{display:inline;}
+.st7{font-size:28px;}
+.st8{fill:#FFFFFF;stroke:#222222;stroke-width:2;stroke-miterlimit:10;}
+
+@media screen and ( min-width: 49em ){
+
+  .container {
+    text-align: center;
+    max-height: 100vh;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
